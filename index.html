@@ -7,7 +7,57 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>Biglietto del treno</title>
 </head>
-<body>
+<body class="text-bg-danger">
+  <section class="container">
+    <h1 class="text-center py-3 text-uppercase">calcola il prezzo del tuo biglietto</h1>
+    <form action="#" class="container-md text-bg-light d-flex justify-content-evenly py-5">
+      <div>
+        <p class="text-danger text-center">Nome e Cognome</p>
+        <input type="text" id= "fullname-field">
+      </div>
+      <div>
+        <p class="text-danger text-center">Km da percorrere</p>
+        <input type="text" id= "kilometers-field">
+      </div>
+      <div>
+        <p class="text-danger text-center">Fascia d'et&agrave;</p>
+        <select id= "age-field">
+          <option value="under">Minorenne</option>
+          <option value="over">Maggiorenne</option>
+          <option value="old">Over 65</option>
+        </select>
+      </div>
+    </form>
+    <div class="text-bg-light d-flex justify-content-center gap-4 py-3">
+      <button type="button" class="btn btn-outline-dark" value="submit" id="submit">Genera</button>
+      <button type="button" class="btn btn-outline-danger" value="reset" id="reset">Annulla</button>
+    </div>
+  </section>
+
+  <section class="container mt-4  ticket hide">
+    <h2 class="text-uppercase text-center">il tuo biglietto</h2>
+    <div class="container-md text-bg-light">
+      <h5 class="text-uppercase">dettagli passeggiero</h5>
+      <div class="row">
+        <div class="col-4 text-bg-secondary">
+          <h6 class="text-uppercase text-center">nome del passeggiero</h6>
+        </div>
+        <div class="col-2">
+          <h6>Offerta</h6>
+          <p>Biglietto standard</p>
+        </div>
+        <div class="col-2" id="carrozza">
+          <h6>Carrozza</h6>
+        </div>
+        <div class="col-2" id="code">
+          <h6>Codice CP</h6>
+        </div>
+        <div class="col-2" id="price">
+          <h6>Costo Biglietto</h6>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="./js/script.js"></script>
 </body>
 </html>
